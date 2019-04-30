@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ProfilingTarget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectTarget>
+    <TargetProject>afa86cc3-039b-44bd-84ff-3af14dc8969a</TargetProject>
+    <FriendlyName>graph_interpolator</FriendlyName>
+  </ProjectTarget>
+  <Reports>
+    <Report>
+      <Filename>C:\Users\allma\AppData\Local\Temp\graph_interpolator_20180929.vsp</Filename>
+    </Report>
+  </Reports>
+</ProfilingTarget>

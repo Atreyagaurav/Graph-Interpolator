@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{afa86cc3-039b-44bd-84ff-3af14dc8969a}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>main.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="build\interpolater\warninterpolater.txt" />
+    <Content Include="build\interpolater\xref-interpolater.html" />
+    <Content Include="dist\form.txt" />
+    <Content Include="dist\ftemp.txt" />
+    <Content Include="dist\pics\bell.gif" />
+    <Content Include="dist\pics\fck.gif" />
+    <Content Include="dist\pics\fy_pers.gif" />
+    <Content Include="dist\pics\fy_steel.gif" />
+    <Content Include="dist\pics\help.gif" />
+    <Content Include="dist\pics\inter.ico" />
+    <Content Include="dist\pics\inter_bg.gif" />
+    <Content Include="form.txt" />
+    <Content Include="ftemp.txt" />
+    <Content Include="pics\bell.gif" />
+    <Content Include="pics\fck.gif" />
+    <Content Include="pics\fy_pers.gif" />
+    <Content Include="pics\fy_steel.gif" />
+    <Content Include="pics\inter.ico" />
+    <Content Include="pics\inter_bg.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classes.py" />
+    <Compile Include="from_file.py" />
+    <Compile Include="graphics.py" />
+    <Compile Include="inter3d.py" />
+    <Compile Include="interpolater3D.py" />
+    <Compile Include="interpolater.py" />
+    <Compile Include="main.py">
+      <Publish>True</Publish>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="build\" />
+    <Folder Include="build\interpolater" />
+    <Folder Include="dist" />
+    <Folder Include="dist\pics" />
+    <Folder Include="pics" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

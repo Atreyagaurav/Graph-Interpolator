@@ -1,0 +1,41 @@
+
+        while(yi>self.Level):
+            y1=yi
+            self.Xmin=self.Xmin+p
+            yi=linear2(self.Xmin,n,x,y)
+        self.Xmin=self.Xmin-p*(self.Level-yi)/(y1-yi)
+        yi=y[n-1]
+        while(yi>self.Level):
+            y1=yi
+            self.Xmax=self.Xmax-p
+            yi=linear2(self.Xmax,n,x,y)
+        self.Xmax=self.Xmax+p*(self.Level-yi)/(y1-yi)
+        self.TopWidth=self.Xmax-self.Xmin
+        p=min((self.Xmax-self.Xmin)*p,p)
+        xi=self.Xmin
+        yi=0
+        self.Area=0
+        self.Perimeter=0
+        l=[]
+        i=0
+        while(xi<self.Xmax):
+            y1=yi
+            xi=xi+p
+            yi=self.Level-linear2(xi,n,x,y)
+            i=i+1
+            if(yi<0):
+                yi=0
+            if(yi==0 and y1==0):
+                continue
+            else:
+                l.append(Line(self.Graph.pixelPoint(Point(xi,self.Level)),self.Graph.pixelPoint(Point(xi,self.Level-yi))).draw(win))
+                self.Area=self.Area+0.5*(yi+y1)*p
+                self.Perimeter=self.Perimeter+Dist(xi-p,y1,xi,yi)
+                try:
+                    l[i-10].undraw()
+                except:
+                    pass
+        for ob in l:
+            ob.undraw()
+        self.Area=self.Area+0.5*(yi)*(self.Xmax-xi)
+        self.Perimeter=self.Perimeter+Dist(xi,yi,self.Xmax,0)

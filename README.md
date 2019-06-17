@@ -31,7 +31,38 @@ The opening Screen first gives you 4 options it is the first one. After clicking
 * you can click copy to copy the formula into your clipboard.
 
 ## Interpolate From File
-This function takes input of a file with x,y or x,y,z data to interpolate a unknown data or interpolate a lot of data stored in a csv (comma seperated text) format. <will add more>
+This function takes input of a file with x,y or x,y,z data to interpolate a unknown data or interpolate a lot of data stored in a csv (comma seperated text) format. 
+This funtion can be used to interpolate both 2D and 3D data, but you have to specify which data you are importing in the first. 
+The steps are:
+* If you have just digitized your curve click previous data to fill all the relevant input fields. open pic you have it.
+* Enter file name and choose the type of data (2D/3D) then click "Load".
+* Click Plot Curves to plot the data.
+* You can use the fields below "Plot curves" to enter X,Y or Z and calculate the remaining. You can choose from available interpolation methods in the bottom.
+* To interpolate large number of data, make a csv file of X or X,Y for 3D, without headers. Load that csv and click interpolate. You can see the interpolated result in the screen. If you click save it'll save the interpolation result in the same path with a suffix.
+
+## Rating Curve Analysis
+This is the fuction which uses the digitized section data to analyse the rating curve of the Section. The data of the section is stored in a .3dd file when you digitize it. 
+The process to generate rating curve is:
+* Same as before the first screen is the help screen, showing the general components of the GUI.
+* If you have just digitized the section you can click "Previous Data" to load the inputs. Click at "Open pic" if that is the case.
+* If there is no previous data enter Filename.
+* Click "Load Data from File". You'll see the table of data on left-top corner.
+* Click plot curves from file to plot the graph.
+* Input all the hydraulic parameters in the textboxes.
+* Click Analyse section and wait for the analysis. You'll see a table in right top corner.
+* You can plot the analysed rating curve in matplotliv interface for visualization.
+* If you need specific value of discharge for fixed height or vice versa, you can use the textboxes below the analyse section botton.
+* To save the rating curve analysis, Give a filename with full path and .csv extension  then click save. It'll save Height, Wetted Perimeter, Top Width, Area, Hydraulic radius and Discharge.
+
+### NOTE: 
+You can also use external data by saving a csv of a section data (chainage,elevation) into a .3dd format inside the data folder. Although a method to add external data from excel/AutoCAD can be added in later versions.
+You can also use the inter.exe in the file to generate linear interpolation formula. the syntax is:
+````
+inter <X> <path/filename.ext> <n>
+````
+where,
+* X is the expression of x-variable used,
+* n is the number of data in the file to be used for interpolation.
 ## Prerequisites
 You'll need one third party app:
 * imgmagick - you can find it [here](https://imagemagick.org/script/download.php)

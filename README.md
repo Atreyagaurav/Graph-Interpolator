@@ -3,14 +3,14 @@ Interpolation from digitizing graphs, also have option to generate rating curve 
 It has main 3 functional functions, one is proposed but i have been not able to start that.
 ## Installation
 You can install in or run it in 3 ways. ( check the Prerequisites)
-* You can clone this repository and run it as it it, if you have python, you can directly run the main.py (althoug this .py is modified before i made this repo so it is not stable.)
+* You can clone this repository and run it as it it, if you have python, you can directly run the main.py (althoug this .py is modified before i made this repo so it is not stable.) So you can use the files inside the "Interpolator_v3.0" which is the last stable build. 
 ````
 git clone https://github.com/Atreyagaurav/Graph-Interpolator.git
 ````
-* You can use the files inside the "Interpolator_v3.0" which is the last stable build. 
 * You can also download the zip of this repository and do one of the above.
+* You can use the Interpolator_v3.0.exe file which is the setup file for windows. Don't install it in C: drive though, the program cannot access the files inside the C: drive and may cause problems.
 
-## Inerpolate From Image
+## Interpolate From Image
 The opening Screen first gives you 4 options it is the first one. After clicking it you'll have to do the followings:
 * The first screen is the help screen giving information of all the parts in this GUI. Click anywhere to exit.
 * if you have any previous data you can just load that.
